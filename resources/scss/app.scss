@@ -57,6 +57,7 @@ section.cart {
   }
 }
 
+
 section.login{
   background: $secondary;
 min-height: calc(100vh - 86px);
@@ -66,4 +67,8 @@ a{
     color: $primary-hover;
   }
 }
+}
+
+.footercolour {
+  background: $dark;
 }
