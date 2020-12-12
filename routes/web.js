@@ -1,22 +1,14 @@
+//here .. indicates the back to main folder and app is main folder
+const homeController = require("../app/http/controller/homeController")
+const authController = require("../app/http/controller/authController")
+const cartController = require("../app/http/controller/customers/cartController")
 
 function initRoutes(app) {
 
-  app.get("/", function(req,res)
-  {
-    res.render('home')
-  })
-
-  app.get("/cart",function(req,res){
-    res.render('customers/cart')
-  })
-
-  app.get("/login",function(req,res){
-    res.render('auth/login')
-  })
-
-  app.get("/register",function(req,res){
-    res.render('auth/register')
-  })
+  app.get("/", homeController().index)
+  app.get("/login",authController().login)
+  app.get("/register",authController().register)
+  app.get("/cart",cartController().index)
 
 }
 
