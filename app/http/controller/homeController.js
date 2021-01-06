@@ -1,3 +1,4 @@
+//Relative path to get the Menu model
 const Menu = require("../../models/menu");
 
 function homeController() {
@@ -6,9 +7,9 @@ function homeController() {
 //index is an function
     index(req,res)
     {
-      Menu.find().then(function(food){
-        //console.log(food);
-        return res.render("home", {foodItems: food});
+      Menu.find().then(function(foods){
+        //console.log(foods);
+        return res.render("home", {foodItems: foods});
       });
 
     }
